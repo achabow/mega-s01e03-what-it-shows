@@ -4,7 +4,7 @@ title: '0002 · Duplicates require the same demonstrated cause'
 owner: Andrzej Chabowski
 status: proposed
 reviewed: '2026-10-29'
-signature: 'Andrzej Chabowski · MEGA S01E03 · 2026-10-29'
+signature: 'v1.eyJzdWIiOiI1NjgiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzI4MTQzNywiZXhwIjoxNzkzMzY3ODM3fQ.JdfXpbn3JdFwokypcZ6Oy90Gh06UZ7_yUiYYIcU2soI'
 ---
 
 <script>
