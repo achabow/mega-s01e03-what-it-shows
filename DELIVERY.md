@@ -4,7 +4,7 @@ This repository contains the supplied support-kb export plus an investigation, a
 
 - Investigation source: `src/routes/kb/incidents/4471-review/+page.svx`
 - Rendered page: `build/kb/incidents/4471-review.html`
-- Signed desk reference: DR-VJ9Y-4QQJ
+- Signed desk reference: DR-QDX7-TKMA
 - Proposed decision: `src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx`
 - Preserved original accepted decision: `src/routes/kb/decisions/0001-dedupe-by-subject/+page.svx`
 
