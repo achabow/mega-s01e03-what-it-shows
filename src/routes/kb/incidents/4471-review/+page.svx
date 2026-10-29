@@ -42,9 +42,15 @@ The desk flags R-41202, R-41209, R-41236, R-41344, and R-41620 as one-day moves.
 
 The chart separates receivedAt from mergedAt. The July merge peak is not an onset peak: reports began in April, before the July bulk merge. Reports continued through the end of this export. A ticket marked known and a queued fix do not establish resolution.
 
+## Engineering update · 5 October 2026
+
+The course desk's live engineering update closes #4471 on 5 October. The parser is **fixed** by `fix(dates): parse dd/mm for eu locales`. The hint is **won't fix** because the booking-v3 form was retired. Retirement removes that form path; it does not mean its hint was corrected. These are different closure reasons for the two accepted tickets.
+
+Our parser ticket is closed as completed on the desk's reported fix. Our hint ticket is closed as not planned on the desk's retirement decision. The historical counts above remain the 4 October export. The five anomalous one-day reports remain a limitation: the update does not give per-report reproduction evidence, so this page does not assert that the parser fix explains those symptoms.
+
 ## What the desk should do
 
-Keep one ticket for each demonstrated mechanism and attach the corresponding unique report IDs. Ask for tenant, form version, channel, entered date, expected date, actual date, and timezone when reproduction is incomplete. Merge only after the cause matches; missing tenant evidence means investigate rather than merge by subject. Recheck current intake before closing either ticket.
+Keep one ticket for each demonstrated mechanism and attach the corresponding unique report IDs. Ask for tenant, form version, channel, entered date, expected date, actual date, and timezone when reproduction is incomplete. Merge only after the cause matches; missing tenant evidence means investigate rather than merge by subject. Check current intake and closure reasons against the desk update; retain unexplained symptoms for follow-up.
 
 [Decision 0002](/kb/decisions/0002-dedupe-by-cause) proposes replacing the subject-only rule, pending the support desk's acceptance. Decision 0001 remains intact as the historical accepted decision.
 
