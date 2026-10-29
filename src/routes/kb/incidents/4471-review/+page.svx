@@ -1,0 +1,51 @@
+---
+layout: runbook
+title: '#4471 review · two date problems behind one subject'
+owner: Andrzej Chabowski
+status: investigated
+reviewed: '2026-10-29'
+signature: 'Andrzej Chabowski · MEGA S01E03 · 2026-10-29'
+---
+
+<script>
+ import IncidentFindings from '#lib/kb/IncidentFindings.svelte';
+ import CauseTable from '#lib/kb/CauseTable.svelte';
+ import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+ import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+## Finding
+
+The incident page's “one issue, one fix queued” claim does not match its executable table. Two distinct mechanisms were merged into #4471. A common subject is a symptom, not evidence of a shared cause.
+
+<IncidentFindings />
+
+## Parser: the shared parser assumes month first
+
+Day-first tenants send dates through app, email, or the booking-v2 form, and through non-form channels even when they use booking-v3. The shared parser reads month first. For example, R-41200 says a 7 April reminder went out on 4 July. Fix the parser to use the tenant's explicit date format and reject ambiguous input where that format is unavailable; test that example and all affected channels.
+
+## Hint: booking-v3 tells day-first users to type month first
+
+A form report from a day-first tenant using booking-v3 follows a different path. Its hint says MM/DD/YYYY, while the form interprets the value in the tenant's day-first convention. Make the hint and parsing contract agree with the tenant locale. Changing only the shared parser does not repair this UI contract. Test booking-v3 for Alder Physio, Copper Studio, and Pale Harbour.
+
+<CauseTable ticket={4471} />
+
+## Evidence and limits
+
+Classification joins each report to its tenant record and asks the platform for that locale's date-part order. It then uses channel and form version through causeOf. Browser locale and meta.intakeTag are intake guesses, so they do not decide the count. The report IDs are deduplicated before filtering and grouping. These totals describe the supplied 4 October export, not a live queue.
+
+The desk flags R-41202, R-41209, R-41236, R-41344, and R-41620 as one-day moves. The component still files all five under parser by tenant and channel. Their wording includes timezone-like differences and an invite preceding its booking; the export does not establish a third root cause. Keep the five in the reported classification count, flag them for reproduction, and do not claim that fixing month/day parsing explains or resolves them.
+
+## When the reports arrived
+
+<QueueTimeline ticket={4471} />
+
+The chart separates receivedAt from mergedAt. The July merge peak is not an onset peak: reports began in April, before the July bulk merge. Reports continued through the end of this export. A ticket marked known and a queued fix do not establish resolution.
+
+## What the desk should do
+
+Keep one ticket for each demonstrated mechanism and attach the corresponding unique report IDs. Ask for tenant, form version, channel, entered date, expected date, actual date, and timezone when reproduction is incomplete. Merge only after the cause matches; missing tenant evidence means investigate rather than merge by subject. Recheck current intake before closing either ticket.
+
+[Decision 0002](/kb/decisions/0002-dedupe-by-cause) proposes replacing the subject-only rule, pending the support desk's acceptance. Decision 0001 remains intact as the historical accepted decision.
+
+<RenderStamp {signature} />

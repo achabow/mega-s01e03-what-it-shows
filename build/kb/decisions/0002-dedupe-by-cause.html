@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link href="../../_app/immutable/entry/start.CitPNPcA.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/-v_Lc1Yp.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Cqfr3Ro1.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/D1CBmWJ_.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.A_TkDnfV.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BjsDKl40.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CeQ0Fui8.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BvfZsH8o.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Bj2eesJi.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.DFrdJFyF.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/5qoTi-ut.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/4.G1fpCx5S.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CxG_z2Sg.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/lxLLZh2g.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BMQSWMDQ.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/E-i5aitW.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DcCN1BeL.js" rel="modulepreload">
+		<!--e2jw2j--><!----><title>0002 · Duplicates require the same demonstrated cause · support kb</title>
+		<link href="../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/DedupeExplorer.C3mwiGDj.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/RenderStamp.CMZ6TBbc.css" rel="stylesheet"></head><body data-sveltekit-preload-data="hover"><div style="display:contents"><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">0002 · Duplicates require the same demonstrated cause</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Andrzej Chabowski</b></span> <span class="status proposed svelte-e2jw2j">proposed</span> <span class="svelte-e2jw2j">reviewed 2026-10-29 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><h2>Context</h2> <p><a href="/kb/incidents/4471-review">Incident review</a> shows that identical subjects can hide different bugs, and different subjects can share a cause. The old triage page was reviewed in June 2024 and is stale under the kb’s 180-day rule. Its live explorer already disagrees with its subject-only instructions.</p> <h2>Decision proposed to the support desk</h2> <p>Supersede decision 0001’s subject-only deduplication rule. Join each report to its tenant and inspect locale, form, channel, and the reproduced mechanism. Merge only when both reports have the same non-null cause. An unknown tenant or an unexplained symptom needs investigation. A subject match alone is insufficient, and a subject difference alone is insufficient to split reports.</p> <div class="try svelte-gq0h2h"><!--[--><fieldset class="svelte-gq0h2h"><legend>report A</legend> <select aria-label="tenant"><!--[--><option selected="">alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option>kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>hint</code></fieldset><fieldset class="svelte-gq0h2h"><legend>report B</legend> <select aria-label="tenant"><!--[--><option>alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option selected="">kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>parser</code></fieldset><!--]--> <p class="verdict svelte-gq0h2h">different causes — keep apart</p></div> <table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody><!--[--><tr><td>app vs email, same tenant</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>same subject, same tenant, different channel</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>same subject, same channel, different tenant</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>different subject, same way in</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>no tenant on file</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><!--]--></tbody></table><!----> <h2>Consequences</h2> <p>Triage takes more evidence than matching subject strings, but each engineering ticket has one mechanism, a defensible count, and specific reproduction steps. Keep anomalies visible and keep received dates separate from merge dates. Leave accepted decision 0001 unchanged; record approval of this replacement separately.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-VJ9Y-4QQJ</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_t8jjp3 = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.CitPNPcA.js"),
+						import("../../_app/immutable/entry/app.A_TkDnfV.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div></body></html>
